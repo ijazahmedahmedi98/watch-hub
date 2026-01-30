@@ -54,3 +54,133 @@ a:hover{
 #headerNav a:hover::after {
     width: 100%;
 }
+
+
+/* Hamburger Menu (hidden on desktop) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 25px;
+    background-color: #e5e7db;
+    border-radius: 2px;
+}
+
+/* Responsive for Mobile */
+@media screen and (max-width: 768px) {
+    #headerNav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: #0f1115;
+        display: none; /* hidden by default */
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    #headerNav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    #headerNav ul li {
+        margin: 15px 0;
+    }
+}
+
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 80px;
+    background-color: #F4F5F7;
+    gap: 30px;
+}
+
+/* Hero Content */
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    color: #0F1115;
+    margin-bottom: 20px;
+}
+
+.hero-content .highlight {
+    color: #C9A24D;
+}
+
+.hero-content p {
+    color: #4B5563;
+    max-width: 500px;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.hero-btn {
+    background-color: #0F1115;
+    color: #FFFFFF;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #141822;
+    color: #C9A24D;
+}
+
+/* Hero Image */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 70%;
+    max-width: 500px;
+    object-fit: contain;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    
+    .hero-content p {
+        margin: 20px auto;
+    }
+
+    .hero-btn {
+        width: 90%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 350px;
+        margin-top: 30px;
+    }
+}
