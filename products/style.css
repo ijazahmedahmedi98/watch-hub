@@ -44,7 +44,7 @@ header h1{
     color: #C9A24D;
 }
 
-/* Hamburger Menu */
+/* Hamburger Menu (hidden on desktop) */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -52,36 +52,53 @@ header h1{
     gap: 5px;
 }
 
-.hamburger div{
-    width: 25px;
+.hamburger span {
+    display: block;
     height: 3px;
-    background-color: white;
-    transition: all 0.3s ease;
+    width: 25px;
+    background-color: #e5e7db;
+    border-radius: 2px;
 }
 
-/* Show nav on mobile */
-@media(max-width:768px){
-    #headerNav ul{
+.hamburger.toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+/* Responsive for Mobile */
+@media screen and (max-width: 768px) {
+    #headerNav ul {
+        flex-direction: column;
         position: absolute;
         top: 100px;
-        left: -100%;
-        flex-direction: column;
+        left: 0;
         width: 100%;
         background-color: #0f1115;
+        display: none; 
         text-align: center;
-        transition: left 0.3s ease;
         padding: 20px 0;
     }
 
-    #headerNav ul.active{
-        left: 0;
-    }
-
-    .hamburger{
+    #headerNav ul.active {
         display: flex;
     }
-}
 
+    .hamburger {
+        display: flex;
+    }
+
+    #headerNav ul li {
+        margin: 15px 0;
+    }
+}
 /* Products Page Title */
 .products_head_titles {
     text-align: center;
