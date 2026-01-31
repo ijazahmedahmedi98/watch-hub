@@ -414,6 +414,7 @@ header h1{
 @media (max-width: 768px) {
     .cart-sidebar {
         width: 100%;
+        right: -100%;
     }
 }
 
