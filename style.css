@@ -72,6 +72,19 @@ a:hover{
     border-radius: 2px;
 }
 
+.hamburger.toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
 /* Responsive for Mobile */
 @media screen and (max-width: 768px) {
     #headerNav ul {
@@ -81,7 +94,7 @@ a:hover{
         left: 0;
         width: 100%;
         background-color: #0f1115;
-        display: none; /* hidden by default */
+        display: none; 
         text-align: center;
         padding: 20px 0;
     }
