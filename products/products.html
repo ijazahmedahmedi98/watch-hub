@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products | The Smart Watch</title>
     <link rel="stylesheet" href="style.css">
+    <script async src="script.js"></script>
 </head>
 <body>
 
@@ -17,7 +18,7 @@
             <li><a href="../home/index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="../about/about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="../contact/contact.html">Contact</a></li>
         </ul>
     </nav>
 
@@ -195,6 +196,24 @@
   </div>
 </section>
 
+<!-- CART SIDEBAR -->
+<div id="cartSidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h3>Your Cart</h3>
+        <span id="closeCart" class="close-cart">&times;</span>
+    </div>
+    <div class="cart-items">
+        <!-- JS will dynamically add products here -->
+    </div>
+    <div class="cart-footer">
+        <p>Total: $<span id="cartTotal">0.00</span></p>
+        <button id="checkoutBtn">Checkout</button>
+    </div>
+</div>
+
+<!-- OPTIONAL OVERLAY -->
+<div id="cartOverlay" class="cart-overlay"></div>
+
 
 <!-- Footer Start -->
 <footer class="site-footer">
@@ -238,16 +257,6 @@
     </div>
 </footer>
 <!-- Footer End -->
-
-<!-- Hamburger JS -->
-<script>
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('#headerNav ul');
-
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
-</script>
 
 </body>
 </html>
